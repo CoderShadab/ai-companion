@@ -374,3 +374,37 @@
   font-weight: 600;
   color: #384262;
 }
+
+
+#star-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows clicks to pass through */
+}
+
+@keyframes color-change {
+  0% { background-color: red; }
+  25% { background-color: orange; }
+  50% { background-color: yellow; }
+  75% { background-color: green; }
+  100% { background-color: blue; }
+}
+
+.star {
+  position: absolute;
+  width: 15px; /* Adjust size */
+  height: 15px; /* Adjust size */
+  background-color: blue;
+  clip-path: polygon(
+    50% 0%, 65% 35%, /* top left */
+    100% 50%, 65% 65%, /* top right */
+    50% 100%, 35% 65%, /* bottom right */
+    0% 50%, 35% 35% /* bottom left */
+  );
+  opacity: 0.8;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  animation: color-change 0.5s infinite;
+}

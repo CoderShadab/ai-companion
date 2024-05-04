@@ -1,3 +1,4 @@
+import CursorEffect from "@/components/cursor"
 import { Collection } from "@/components/shared/Collection"
 import { navLinks } from "@/constants"
 import { getAllImages } from "@/lib/actions/image.actions"
@@ -12,6 +13,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
 
   return (
     <>
+      <CursorEffect />
       <section className="home">
         <h1 className="home-heading">
           Unleash Your Creative Vision with Imaginify
