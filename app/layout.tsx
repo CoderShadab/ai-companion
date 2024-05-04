@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { ClerkProvider } from "@clerk/nextjs";
 
 import "./globals.css";
+import { CrispProvider } from "@/components/crisp-provider";
 
 const IBMPlex = IBM_Plex_Sans({ 
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
       variables: { colorPrimary: '#624cf5' }
     }}>
       <html lang="en">
+        <CrispProvider />
         <body className={cn("font-IBMPlex antialiased", IBMPlex.variable)}>
           {children}
         </body>
